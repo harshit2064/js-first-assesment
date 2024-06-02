@@ -1,0 +1,31 @@
+// Define an array to hold the NFTs
+const harshits = [];
+
+// Function to mint an NFT
+function mintNFT(country_, state_, price_, fav_sports_) {
+    const harshit = {
+        country: country_,
+        state: state_,
+        price: price_,
+        fav_sports: fav_sports_,
+    }
+    harshits.push(harshit);
+    console.log("NFT minted: " + JSON.stringify(harshit));
+}
+
+// Function to list all NFTs
+function listNFTs() {
+    for (let i = 0; i < harshits.length; i++) {
+        console.log(harshits[i]);
+    }
+}
+
+// Function to get the total supply of NFTs
+function getTotalSupply() {
+    console.log("Total supply: " + harshits.length);
+}
+
+// Call your functions below this line
+mintNFT("India", "uk", "one million", "cricket");
+listNFTs();
+getTotalSupply();
